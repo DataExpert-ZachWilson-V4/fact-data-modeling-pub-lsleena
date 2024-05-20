@@ -1,4 +1,4 @@
-INSERT INTO lsleena.user_devices_cumulated
+INSERT INTO lsleena.hosts_cumulated
 WITH yesterday AS
             (
                    SELECT *
