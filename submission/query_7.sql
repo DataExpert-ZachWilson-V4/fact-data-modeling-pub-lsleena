@@ -5,4 +5,4 @@ CREATE OR REPLACE TABLE lsleena.host_activity_reduced
     metric_array array(INTEGER),
     month_start VARCHAR
 )
-with (FORMAT = 'PARQUET', partitioning = Array['month_start'])
+with (FORMAT = 'PARQUET', partitioning = Array['metric_name', 'month_start'])
