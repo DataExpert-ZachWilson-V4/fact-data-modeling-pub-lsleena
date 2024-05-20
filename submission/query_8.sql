@@ -1,5 +1,5 @@
 INSERT INTO
-  host_activity_reduced  -- insert data into the host_activity_reduced 
+  lsleena.host_activity_reduced  -- insert data into the host_activity_reduced
 WITH
   yesterday AS ( -- CTE to fetch data for the previous month start
     SELECT
@@ -8,7 +8,7 @@ WITH
       metric_array,
       month_start
     FROM
-      host_activity_reduced
+      lsleena.host_activity_reduced
     WHERE
       month_start = '2023-01-01' -- Filtering for the start of the month
   ),
@@ -19,7 +19,7 @@ WITH
       metric_value,              
       DATE
     FROM
-      daily_web_metrics
+      lsleena.daily_web_metrics
     WHERE
       DATE = DATE('2023-01-02')  -- Filtering for the current date
   )
